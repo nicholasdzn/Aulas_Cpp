@@ -84,6 +84,7 @@ int main(){
     cout << "Margem de erro em porcentagem para 40 termos: " << 100 - ((porcentagem(sin(valor_radianos), seno(valor_radianos,40)))) << "%" << endl;
     cout << "|--------------------------------------------|" << endl;
     cout << endl;
+    
     cout << "|-------------VALORES DO COSSENO-------------|" << endl;
     cout << "Valor do cosseno para " << n << " termos: " << cosseno(valor_radianos,n) << endl;
     cout << "Valor de cosseno para 3 termos: " << cosseno(valor_radianos,3) << endl;

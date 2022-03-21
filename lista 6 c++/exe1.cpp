@@ -24,7 +24,7 @@ int main(){
     cin >> carro.marca;
     cout << "Digite o modelo: " << endl;
     cin >> carro.modelo;
-    cout << "Digite o ano de fabricacao: " << setw;
+    cout << "Digite o ano de fabricacao: " << endl;
     cin >> carro.ano_fab;
     cout << "Digite o numero do renavam: " << endl;
     cin >> carro.renavam;

@@ -4,8 +4,8 @@
 #define PI 3.14159265358979323846
 using namespace std;
 
-float fatorial(int n){
-    float temp = n;  
+double fatorial(int n){
+    double temp = n;  
     if(n < 2){
         return 1;
     }        
@@ -16,29 +16,30 @@ float fatorial(int n){
     return temp;
 }
 
-float radianos(float angulo){
+
+double radianos(double angulo){
     angulo = (angulo/1) * (PI/180);
     return angulo;
 }
 
-float seno(float angulo, int n){
-    float resultado = 0;
+double seno(double angulo, int n){
+    double resultado = 0;
     for(int i = 0; i < n; i++){
         resultado += pow(-1, i) * pow(angulo, 2*i+1)/fatorial(2*i + 1);
     }
     return resultado;
 }
 
-float cosseno(float angulo, int n){
-    float resultado = 0;
+double cosseno(double angulo, int n){
+    double resultado = 0;
     for(int i = 0; i < n; i++){
         resultado += ( (pow(-1, i) * pow(angulo, (2*i)) ) / (fatorial(2*i)) );
     }
     return resultado;
 }
 
-float erro(float angulo_function, float angulo_user){
-    float resultado = 0;
+double erro(double angulo_function, double angulo_user){
+    double resultado = 0;
     if(angulo_function > angulo_user){
         resultado = angulo_function - angulo_user;
     }else{
@@ -47,8 +48,8 @@ float erro(float angulo_function, float angulo_user){
     return resultado;
 }
 
-float porcentagem(float angulo_function, float angulo_user){
-    float x, resultado = 0;
+double porcentagem(double angulo_function, double angulo_user){
+    double x, resultado = 0;
     if(angulo_function > angulo_user){
         x = angulo_function;
         angulo_user = angulo_user * 100;
@@ -62,14 +63,18 @@ float porcentagem(float angulo_function, float angulo_user){
 }
 
 int main(){
-    float graus;
-    float valor_radianos;
+    double graus;
+    double valor_radianos;
     int n;
 
     cout << "Digite o valor do angulo em graus: ";
     cin >> graus;
     cout << "Digite o valor do N: ";
+    //Termos
     cin >> n;
+
+    //Remove a notação cientifica
+    //cout << fixed << setprecision(10);
 
     valor_radianos = radianos(graus);
 
